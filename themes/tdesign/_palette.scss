@@ -1,6 +1,8 @@
 @use "sass:map";
 @use "sass:color";
 
+@import url('/widgets/custom.css');
+
 @function hex2rgb($color) {
   @return color.red($color), color.green($color), color.blue($color);
 }
