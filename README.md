@@ -11,6 +11,8 @@ A fork of Rem Craft. 一款现代化、扁平化设计的思源笔记主题
 
 ## Rem-Craft-Plus 扩展功能
 
+**Rem Craft + 自定义css片段 + 自定义js片段 = Rem Craft Plus**
+
 1. 字体、代码块、标题间距等样式改进
 
    新增样式在项目根目录的 `custom` 目录
