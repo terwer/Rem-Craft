@@ -1,5 +1,265 @@
-# 更新历史 | Changelog 
+# 版本日志 | Changelog 
 
+
+### [2.5.10](https://github.com/svchord/Rem-Craft/compare/v2.5.9...v2.5.10) (2023-01-28)
+
+
+### ♻️ 代码重构 | Code Refactoring
+
+* :recycle: 重构静态资源加载方式 ([5fda915](https://github.com/svchord/Rem-Craft/commit/5fda91536bc395e574a343c94f4233d6d9d6aaf6))
+
+
+### 📦‍ 构建相关 | Build System
+
+* :package: 更新依赖 ([4ac76c4](https://github.com/svchord/Rem-Craft/commit/4ac76c4d0265d06cd2a7c106d5150c33b72c4af1))
+
+
+### 🐛 修复缺陷 | Bug Fixes
+
+* :bug: 兼容思源2.7.1 ([bde8953](https://github.com/svchord/Rem-Craft/commit/bde895333f0f7c1ac662a6b983e8100cc9267845))
+* :bug: 修复顶栏按钮悬浮样式 ([bfa9fc8](https://github.com/svchord/Rem-Craft/commit/bfa9fc8685ecfaefaaa32504e6d98ab0382a3975))
+
+### [2.5.9](https://github.com/svchord/Rem-Craft/compare/v2.5.8...v2.5.9) (2023-01-17)
+
+
+### ♻️ 代码重构 | Code Refactoring
+
+* :recycle: 优化dock栏监听写法 ([69bbd4d](https://github.com/svchord/Rem-Craft/commit/69bbd4de7d68e40fed8f9891a59234dd6f5e9392))
+
+
+### 🐛 修复缺陷 | Bug Fixes
+
+* :bug: 初步兼容2.7.0 ([e0d11e7](https://github.com/svchord/Rem-Craft/commit/e0d11e749a7bad8a67bcf6ce50ad53aa6f9b1d87))
+* :bug: 兼容思源2.7.0正式版 ([631b9a0](https://github.com/svchord/Rem-Craft/commit/631b9a079bf6f2bddf9f254795c3e67e07d865b6))
+* :bug: 修复暗黑模式下日历的颜色问题 ([83cfc18](https://github.com/svchord/Rem-Craft/commit/83cfc18da32152bc0b04b194712d614864ccfa04))
+* :bug: 优化模板选择弹窗样式 ([1c43ad3](https://github.com/svchord/Rem-Craft/commit/1c43ad3034b95a545ee3eefb5a8257b52c70add5))
+* :bug: 增加顶栏监听 ([dafcf1d](https://github.com/svchord/Rem-Craft/commit/dafcf1d8973b24f93f68419d697f431f3efcc0f9))
+
+### [2.5.8](https://github.com/svchord/Rem-Craft/compare/v2.5.7...v2.5.8) (2023-01-12)
+
+
+### 🐛 修复缺陷 | Bug Fixes
+
+* :bug: 兼容新版顶栏 ([eca2ab8](https://github.com/svchord/Rem-Craft/commit/eca2ab8567d3066f1e9932d2d125d89e4f1e9db2))
+* :bug: 修复反链面板样式问题 ([828c546](https://github.com/svchord/Rem-Craft/commit/828c546725da9f221f255b9337fd09d140f9adfb)), closes [#100](https://github.com/svchord/Rem-Craft/issues/100)
+* :bug: 修复关系图全屏下的样式问题 ([dad97e0](https://github.com/svchord/Rem-Craft/commit/dad97e0a917fbaca0746bce43ff208c976a6b5ef))
+* :bug: 优化闪卡卡组预览界面 ([582d359](https://github.com/svchord/Rem-Craft/commit/582d35923c385571d45f456ea703d1542232e895))
+
+### [2.5.7](https://github.com/svchord/Rem-Craft/compare/v2.5.6...v2.5.7) (2023-01-05)
+
+
+### 🐛 修复缺陷 | Bug Fixes
+
+* :bug: 修复设置菜单样式问题 ([7657d8a](https://github.com/svchord/Rem-Craft/commit/7657d8ae049889a4bc32db95392b9eaf41fabb36)), closes [#99](https://github.com/svchord/Rem-Craft/issues/99)
+* :bug: 优化闪卡页面样式 ([84131f9](https://github.com/svchord/Rem-Craft/commit/84131f9540b795c9d31640e3c43ff90529eafd50)), closes [#97](https://github.com/svchord/Rem-Craft/issues/97)
+* :bug: 增加移动端判断 ([789d8b7](https://github.com/svchord/Rem-Craft/commit/789d8b75e1c7ceeacfa74f5bb0c7d76709a0fb04)), closes [#98](https://github.com/svchord/Rem-Craft/issues/98)
+
+### [2.5.6](https://github.com/svchord/Rem-Craft/compare/v2.5.5...v2.5.6) (2022-12-23)
+
+
+### ✏️ 文档更新 | Documentation
+
+* :memo: 更新readme ([27a8a83](https://github.com/svchord/Rem-Craft/commit/27a8a8389f34babe78639dd0185b482e74dabf48))
+
+
+### 🐛 修复缺陷 | Bug Fixes
+
+* :bug: 修复暗黑模式下选中底色问题 ([2fd81d1](https://github.com/svchord/Rem-Craft/commit/2fd81d1a17fcb1c740693b0f7e1112becdabcf2f)), closes [#96](https://github.com/svchord/Rem-Craft/issues/96)
+* :bug: 修复弹窗按钮和右边栏的冲突问题 ([1b0e6e1](https://github.com/svchord/Rem-Craft/commit/1b0e6e18680cd28d4867cb4f5d3c27d51e068e59)), closes [#95](https://github.com/svchord/Rem-Craft/issues/95)
+* :bug: 修复列表块内标题块的样式 ([b722e81](https://github.com/svchord/Rem-Craft/commit/b722e81878e24f145a19c4b939380bc20527d447))
+* :bug: 修复输入框样式无法查看的问题 ([94973b2](https://github.com/svchord/Rem-Craft/commit/94973b2242b63409e53b4345b87e803e275b3d82))
+* :bug: 修复搜索弹窗圆角 ([7f26bc9](https://github.com/svchord/Rem-Craft/commit/7f26bc92bbc93f90ba12d0fe9f93bdf830909baf))
+* :bug: 修复子弹流的样式问题 ([b113f62](https://github.com/svchord/Rem-Craft/commit/b113f62632c688385d8aa81b9100bd03054bb2b6))
+
+### [2.5.5](https://github.com/svchord/Rem-Craft/compare/v2.5.4...v2.5.5) (2022-12-11)
+
+
+### 📦‍ 构建相关 | Build System
+
+* :package: 换用pnpm ([111e67e](https://github.com/svchord/Rem-Craft/commit/111e67e246f65bfe304316c6624c53482b4a3b63))
+
+
+### 🐛 修复缺陷 | Bug Fixes
+
+* :bug: 修复超链接图标的问题 ([8612bc7](https://github.com/svchord/Rem-Craft/commit/8612bc72d2a84b59d87572ff5e2a8f31e734787e))
+* :bug: 修复关闭按钮失效的问题 ([2513c3b](https://github.com/svchord/Rem-Craft/commit/2513c3bf6d746e2b9c9a6472829213fd8d011cb8)), closes [#85](https://github.com/svchord/Rem-Craft/issues/85)
+* :bug: 修复光标丢失的问题 ([6bb0503](https://github.com/svchord/Rem-Craft/commit/6bb050305ecc9dfc737aa0655d84c452b556ef41)), closes [#88](https://github.com/svchord/Rem-Craft/issues/88)
+* :bug: 修复行内评论 ([4e326af](https://github.com/svchord/Rem-Craft/commit/4e326afaf73658a7f9ae49a077f72889144b6bf8)), closes [#86](https://github.com/svchord/Rem-Craft/issues/86)
+* :bug: 修复子弹流与引用块的冲突问题 ([5f533b0](https://github.com/svchord/Rem-Craft/commit/5f533b0e08841014673b859b9a05262420da0a1e))
+* :bug: 增加Alt+B反链面板底部内边距 ([a50e055](https://github.com/svchord/Rem-Craft/commit/a50e0554229f86bad9e36a15e50eb00311c0c2f4)), closes [#90](https://github.com/svchord/Rem-Craft/issues/90)
+
+### [2.5.4](https://github.com/svchord/Rem-Craft/compare/v2.5.3...v2.5.4) (2022-12-06)
+
+
+### ⚡ 性能提升 | Performance Improvements
+
+* :zap: 重构顶部页签栏，提升性能 ([2bc25e4](https://github.com/svchord/Rem-Craft/commit/2bc25e40d7c744683d8957b11ae88ef7cd312b30))
+
+
+### ✏️ 文档更新 | Documentation
+
+* :memo: 更新readme ([71cfbae](https://github.com/svchord/Rem-Craft/commit/71cfbae99683f3a911002b045f0318a8d4a3253f))
+
+
+### 🐛 修复缺陷 | Bug Fixes
+
+* :bug: 淡化块滑动条 ([fd68a85](https://github.com/svchord/Rem-Craft/commit/fd68a8565174b85b4e566e238b2f24a4ba2c003d)), closes [#63](https://github.com/svchord/Rem-Craft/issues/63)
+* :bug: 调整顶部页签栏位置 ([bde2ae7](https://github.com/svchord/Rem-Craft/commit/bde2ae7767d71e4349bd0ec99f7cc8d5b5551c81))
+* :bug: 修复暗黑模式下.block__logo的颜色问题 ([905ab85](https://github.com/svchord/Rem-Craft/commit/905ab850e3ea1b5eaadd16a212f62a631459231e))
+* :bug: 修复大纲界面标题图标样式问题 ([1b45c4f](https://github.com/svchord/Rem-Craft/commit/1b45c4f81ffc079d92371ea5571f336ca0719058))
+* :bug: 修复代码片段弹窗关闭按钮样式 ([26f14c0](https://github.com/svchord/Rem-Craft/commit/26f14c066deadc0199fbd3132b3d92a4b8b326ca))
+* :bug: 修复反链界面的字体大小问题 ([3aab0cd](https://github.com/svchord/Rem-Craft/commit/3aab0cdf1533ccb1a5697ae2b662088faeab1a89))
+* :bug: 修复链接图标显示问题 ([544b6b0](https://github.com/svchord/Rem-Craft/commit/544b6b009aa4ba0b9b8023d1c7021b69271d6262)), closes [#84](https://github.com/svchord/Rem-Craft/issues/84)
+* :bug: 修复数据历史界面的样式问题 ([fce0a05](https://github.com/svchord/Rem-Craft/commit/fce0a0546d7f1f1a6545b61c8b1022e86b35b835))
+* :bug: 修复题头图使用:has导致的卡顿问题 ([abe83c5](https://github.com/svchord/Rem-Craft/commit/abe83c5c14e2569d1502d3061fb000f4bdd233b0))
+* :bug: 修复图片浏览界面缩放文字颜色 ([3502772](https://github.com/svchord/Rem-Craft/commit/35027727e5e2b1bc96210acb8d1ba19847289e14))
+* :bug: 修复子弹流样式问题 ([b7688ba](https://github.com/svchord/Rem-Craft/commit/b7688ba62feff2c2fdefc01110db8a543fa6a31e))
+* :bug: 修改边栏样式，使得可拖拽窗口 ([bdd041c](https://github.com/svchord/Rem-Craft/commit/bdd041c6289be3371ce6b87cb01d1069a81fb8fd))
+* :bug: 优化边窗样式 ([d46b1d3](https://github.com/svchord/Rem-Craft/commit/d46b1d34f360f612d5f4ae5685f359c8079b5633))
+* :bug: 优化导出为图片弹窗样式 ([a2bb46f](https://github.com/svchord/Rem-Craft/commit/a2bb46f33d24abdf6320de580c98e5069525c4bd))
+* :bug: 优化嵌入块样式 ([d084455](https://github.com/svchord/Rem-Craft/commit/d0844558560841f56bb50503a8a43b914109b85b))
+* :bug: 优化行内mark样式 ([1e9fe2b](https://github.com/svchord/Rem-Craft/commit/1e9fe2b9d6c9f9a87bb1125951ea5c9afff69b27))
+* :bug: 优化字体菜单按钮样式 ([15fc6db](https://github.com/svchord/Rem-Craft/commit/15fc6db1c8045e5fb07051206e2e9e1034c5c7b8))
+
+### [2.5.3](https://github.com/svchord/Rem-Craft/compare/v2.5.2...v2.5.3) (2022-11-29)
+
+
+### 🐛 修复缺陷 | Bug Fixes
+
+* :bug: 修复linux环境下日历按钮的位置 ([c9ac24f](https://github.com/svchord/Rem-Craft/commit/c9ac24f2c269799ebc1605143f96f24248b6a451))
+
+### [2.5.2](https://github.com/svchord/Rem-Craft/compare/v2.5.1...v2.5.2) (2022-11-29)
+
+
+### 🐛 修复缺陷 | Bug Fixes
+
+* :bug: 根据顶栏结构动态计算页签边距 ([c2f5c53](https://github.com/svchord/Rem-Craft/commit/c2f5c536b645d2e88247eb3834fec0e2e30d6742)), closes [#67](https://github.com/svchord/Rem-Craft/issues/67)
+* :bug: 兼容新版搜索界面 ([6280741](https://github.com/svchord/Rem-Craft/commit/6280741063db3c693a403035eb43799c8eda198a))
+* :bug: 修复关闭顶部页签后空白页的样式 ([8caded7](https://github.com/svchord/Rem-Craft/commit/8caded7837b785cc0c28ebab9f896045bbacd7b5))
+* :bug: 修复集市卡片按钮样式问题 ([9d76fb5](https://github.com/svchord/Rem-Craft/commit/9d76fb57b201b8cd94cc8591fc0569339f7d5966))
+
+
+### ✏️ 文档更新 | Documentation
+
+* :memo: 更新readme ([46840de](https://github.com/svchord/Rem-Craft/commit/46840de79720f0c9426a16417eb8bf8e25837f84))
+* :memo: 更新Readme ([4f198d0](https://github.com/svchord/Rem-Craft/commit/4f198d08c7cfd996975b9e341803bb0c5fc37b15))
+
+### [2.5.1](https://github.com/svchord/Rem-Craft/compare/v2.5.0...v2.5.1) (2022-11-26)
+
+
+### 🐛 修复缺陷 | Bug Fixes
+
+* :bug: 修复替换弹窗的样式问题，并优化搜索结果列表 ([0399a14](https://github.com/svchord/Rem-Craft/commit/0399a142d5752ea52d33e35b58c212868e6e993c)), closes [#76](https://github.com/svchord/Rem-Craft/issues/76)
+* :bug: 修复引号字体的问题 ([6023b8b](https://github.com/svchord/Rem-Craft/commit/6023b8bd6b5b6e13867f634a166d727d40721e8e))
+* :bug: 优化状态栏菜单交互 ([b379384](https://github.com/svchord/Rem-Craft/commit/b37938432011c49126e903e43298ac8ec0b25a91))
+
+## [2.5.0](https://github.com/svchord/Rem-Craft/compare/v2.4.0...v2.5.0) (2022-11-26)
+
+
+### ♻️ 代码重构 | Code Refactoring
+
+* :recycle: 将文档列表缩进代码抽出，实现用户自定义 ([8355802](https://github.com/svchord/Rem-Craft/commit/83558024aac61439e775a1b48f11a952e177531b))
+
+
+### ✨ 新增功能 | Features
+
+* :sparkles: 增加子弹流列表辅助线功能 ([cec3bfb](https://github.com/svchord/Rem-Craft/commit/cec3bfb96e981ccd1fde0720cc0de27481a32266))
+
+
+### 🐛 修复缺陷 | Bug Fixes
+
+* :bug: 修复边栏动画卡顿问题 ([3fedf12](https://github.com/svchord/Rem-Craft/commit/3fedf122346a9a3cfe8c362dc499a4aab0076441))
+* :bug: 修复钉住页签的图标样式 ([a7eb409](https://github.com/svchord/Rem-Craft/commit/a7eb409651eaaef6886c15b3c5c0d89d4ee39d4c))
+* :bug: 修复日历挂件新建日记重复问题 ([94c7673](https://github.com/svchord/Rem-Craft/commit/94c767313c2926fd9df53c43f8ebaf095a61f9a8))
+* :bug: 修复新版状态栏导致的问题 ([8eacca0](https://github.com/svchord/Rem-Craft/commit/8eacca00a4ee1e0287e1c137ccdfa7ebff44e25a))
+* :bug: 修复页签栏关闭动画卡顿问题 ([e70a953](https://github.com/svchord/Rem-Craft/commit/e70a953b865c0b478975810002f056295c8615c6))
+* :bug: 优化中性色 ([8f8e396](https://github.com/svchord/Rem-Craft/commit/8f8e396c1f0d1f47e9b038d545cc785b1a20d643))
+* :bug: 优化状态栏样式 ([1929e56](https://github.com/svchord/Rem-Craft/commit/1929e56d7747dfd50576276b5d7076f5f78fd846)), closes [#75](https://github.com/svchord/Rem-Craft/issues/75)
+
+## [2.4.0](https://github.com/svchord/Rem-Craft/compare/v2.3.0...v2.4.0) (2022-11-21)
+
+
+### ♻️ 代码重构 | Code Refactoring
+
+* :recycle: 初步重构顶部页签栏 ([a2f9247](https://github.com/svchord/Rem-Craft/commit/a2f92479c6f337cd22684d9267ffaffd89b9bd6e)), closes [#67](https://github.com/svchord/Rem-Craft/issues/67) [#72](https://github.com/svchord/Rem-Craft/issues/72)
+* :recycle: 优化scripts目录结构 ([77b4520](https://github.com/svchord/Rem-Craft/commit/77b452090bec98b2d006e631d5bfd4a36531a113))
+* :recycle: 重构目录结构 ([a314038](https://github.com/svchord/Rem-Craft/commit/a314038a7030e4be2c4b320a4879045ccfc64c0a))
+* :recycle: 重构文件目录，将link-icon转移到plugin目录下，并恢复wnd动画 ([9a22fac](https://github.com/svchord/Rem-Craft/commit/9a22fac85f76f864c39724a7d5a0fec287dba106))
+
+
+### ✨ 新增功能 | Features
+
+* :sparkles: 为非最大化窗口添加边框 ([0605908](https://github.com/svchord/Rem-Craft/commit/0605908addfe9abc38ae62c282cd3415d857186f))
+* :sparkles: 优化Dock栏样式 ([60884f4](https://github.com/svchord/Rem-Craft/commit/60884f4e1398d634a54fef23fd2db73f0b958bf4)), closes [#51](https://github.com/svchord/Rem-Craft/issues/51)
+* :sparkles: 增加日历面板 ([f097ff3](https://github.com/svchord/Rem-Craft/commit/f097ff321409d167b2d5e1fccb2bd91e5481f5e1)), closes [#69](https://github.com/svchord/Rem-Craft/issues/69)
+* :sparkles: 整合siyuan-comment功能 ([210cffb](https://github.com/svchord/Rem-Craft/commit/210cffbfb4748819d89cf17ef50ed069bdf95a0f)), closes [#46](https://github.com/svchord/Rem-Craft/issues/46)
+
+
+### ✏️ 文档更新 | Documentation
+
+* :memo: 更新Readme和preview.png ([d4ac738](https://github.com/svchord/Rem-Craft/commit/d4ac738505ff99a6cdabeeefbff9f100c61b5099))
+
+
+### 🐛 修复缺陷 | Bug Fixes
+
+* :bug: 修复顶部页签栏的边距问题 ([65ed8b0](https://github.com/svchord/Rem-Craft/commit/65ed8b05cb7f4250735f00dd3d8687e9d74e02cf))
+* :bug: 修复块滚动条的样式问题 ([8c3c603](https://github.com/svchord/Rem-Craft/commit/8c3c60378aa7cb907a0b2a9870540624f5954c8e)), closes [#73](https://github.com/svchord/Rem-Craft/issues/73)
+* :bug: 修复文件图标无法显示的问题 ([1cd944e](https://github.com/svchord/Rem-Craft/commit/1cd944e4abd66517d5498556e4b6742bf4cd8923)), closes [#70](https://github.com/svchord/Rem-Craft/issues/70)
+* :bug: 修复文件图标无法显示的问题 ([635bc34](https://github.com/svchord/Rem-Craft/commit/635bc345753a2696d2dce5ce0c899ea82ecbcaf2)), closes [#70](https://github.com/svchord/Rem-Craft/issues/70)
+* :bug: 修复页签栏滚动时，顶栏无法拖拽窗口的问题 ([bb166ad](https://github.com/svchord/Rem-Craft/commit/bb166ad4fadf2b656f155a31ede702c8b0033fac))
+* :bug: 优化选中文字底色，提高可读性 ([13f6e80](https://github.com/svchord/Rem-Craft/commit/13f6e800b74f78f1be975faf732cc6b46bd2ef15)), closes [#66](https://github.com/svchord/Rem-Craft/issues/66)
+* :bug: 优化有序列表序号样式 ([cdde49a](https://github.com/svchord/Rem-Craft/commit/cdde49afcfec9aa8b2968ac5950d0f661d419279)), closes [#66](https://github.com/svchord/Rem-Craft/issues/66)
+* :bug: 优化tanBar写法，暂时删除边窗动画 ([dc0f0ee](https://github.com/svchord/Rem-Craft/commit/dc0f0eee0f9fb957bb460d6d37bff01f57ac667c))
+* :bug: 优化tooltips行高 ([768b3dd](https://github.com/svchord/Rem-Craft/commit/768b3dd6f4fb5dd35ca7fbb5e90f8acc7b8883cd)), closes [#66](https://github.com/svchord/Rem-Craft/issues/66)
+
+## [2.3.0](https://github.com/svchord/Rem-Craft/compare/v2.2.5...v2.3.0) (2022-11-06)
+
+
+### ✨ 新增功能 | Features
+
+* :sparkles: 参考obsidian改进页签 ([afa3053](https://github.com/svchord/Rem-Craft/commit/afa3053527d8aac86fe01a2e9b68d89a495a8899))
+
+
+### ⚡ 性能提升 | Performance Improvements
+
+* :zap: 修改行内超链接块写法，提高可维护性 ([fa4c050](https://github.com/svchord/Rem-Craft/commit/fa4c0505c12dc9650227faf2378b62b9769e0306))
+
+
+### ♻️ 代码重构 | Code Refactoring
+
+* :recycle: 重构theme.js，增加scripts文件目录，提高可维护性 ([c9d25ba](https://github.com/svchord/Rem-Craft/commit/c9d25baea4843b3372d87372c366ad4c88b96d9f))
+
+
+### 🐛 修复缺陷 | Bug Fixes
+
+* :bug: 减少list-item的间距 ([a71e463](https://github.com/svchord/Rem-Craft/commit/a71e463e711a44f0db118b61d1c377fd9fdc07d9)), closes [#62](https://github.com/svchord/Rem-Craft/issues/62)
+* :bug: 适配mac顶栏 ([fe51ccc](https://github.com/svchord/Rem-Craft/commit/fe51cccb94b23dd46eb6442d5cb096d7e290f45b))
+* :bug: 修复钉住页签和未打开文档的空界面样式 ([4aeaa9a](https://github.com/svchord/Rem-Craft/commit/4aeaa9a3169b652a5cf884dc52c907fd8a2c9d25))
+* :bug: 修复分屏时的bug ([18d1ee7](https://github.com/svchord/Rem-Craft/commit/18d1ee7f2da752d27a60608d4e7f036eac5e68a0))
+* :bug: 修复行内标签块换行问题 ([9de8d64](https://github.com/svchord/Rem-Craft/commit/9de8d64dd1ae48600f23a65d41979f73c5f2c6e4)), closes [#60](https://github.com/svchord/Rem-Craft/issues/60)
+* :bug: 修复状态栏遮挡问题 ([937f9f3](https://github.com/svchord/Rem-Craft/commit/937f9f3964dcaa36d0bc40008a276cac6a1b0c4d)), closes [#59](https://github.com/svchord/Rem-Craft/issues/59)
+* :bug: 修复左侧边栏关闭时的样式缺陷 ([170f5ec](https://github.com/svchord/Rem-Craft/commit/170f5ec981c2cd2feeb999009729bf4aa717251b))
+* :bug: 修复pdf导出页边距的问题 ([a512a83](https://github.com/svchord/Rem-Craft/commit/a512a8366474179d5e2378674a95b121beacbfc2))
+* :bug: 优化顶栏、页签、边栏的样式 ([089a199](https://github.com/svchord/Rem-Craft/commit/089a199143293e6b7e7397a6a46ae57d8b611490))
+* :bug: 优化顶栏页签的一系列样式问题 ([52b58ee](https://github.com/svchord/Rem-Craft/commit/52b58ee8ee2dc48e30215f5eb2e5b8c202a8ea1b))
+
+
+### ✏️ 文档更新 | Documentation
+
+* :memo: 更新readme和preview.png，修改.versionrc ([7b252fd](https://github.com/svchord/Rem-Craft/commit/7b252fd9d8e717f11727aa36ea18232a236f2fe2))
+
+### [2.2.5](https://github.com/svchord/Rem-Craft/compare/v2.2.4...v2.2.5) (2022-10-31)
+
+
+### 🐛 修复缺陷 | Bug Fixes
+
+* :bug: 美化新版代码片段可视化界面 ([c88e388](https://github.com/svchord/Rem-Craft/commit/c88e388d0580913d889b7b153e17891bdc9108d5))
+* :bug: 修复菜单项位于顶栏位置时无法点击的问题 ([5c02a1e](https://github.com/svchord/Rem-Craft/commit/5c02a1e1f70afdfa7a723b17e5f290b6384c08ab))
+* :bug: 修复块引用菜单输入框的样式问题 ([8218bc7](https://github.com/svchord/Rem-Craft/commit/8218bc77905c45e8fefd6e9fdc89a29f3cedc62e))
+* :bug: 优化编辑区域行内工具栏样式 ([2f99d76](https://github.com/svchord/Rem-Craft/commit/2f99d76989713ab9f3585b7748f774ade92f7e88)), closes [#56](https://github.com/svchord/Rem-Craft/issues/56)
+* :bug: 优化列表块标按钮的样式 ([034b63e](https://github.com/svchord/Rem-Craft/commit/034b63e8e11dbb4d286622a4f49e07c20830f5f5))
+* :bug: 优化数据历史界面样式 ([b509cbc](https://github.com/svchord/Rem-Craft/commit/b509cbc92dfce8d8e60c8897fa90485025638dee))
+* :bug: 优化引述块样式 ([d3d11ed](https://github.com/svchord/Rem-Craft/commit/d3d11ede2e62ce9cebec896bc63ea8bcb33c5bc9)), closes [#58](https://github.com/svchord/Rem-Craft/issues/58)
 
 ### [2.2.4](https://github.com/svchord/Rem-Craft/compare/v2.2.3...v2.2.4) (2022-10-27)
 

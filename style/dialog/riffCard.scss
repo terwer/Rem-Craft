@@ -1,0 +1,61 @@
+@use "../common" as *;
+@use "history";
+@use "small";
+
+.b3-dialog {
+  &__container {
+    &:has(.b3-dialog__cardblock) {
+      width: 50vw !important;
+    }
+    &:has(#cardPreview) {
+      width: 80vw !important;
+      .b3-dialog__header {
+        @include history.bar();
+      }
+      .b3-dialog__close {
+        display: block;
+        @include small.close();
+      }
+      .fn__flex-column[style*="100%"] {
+        .fn__flex:nth-child(2),
+        .fn__flex:last-child {
+          margin: 0 16px;
+        }
+        .fn__flex:nth-child(2) {
+          padding: 8px 0;
+          .block__icon {
+            @include history.page-btn();
+          }
+        }
+        .fn__flex:last-child {
+          border-top: $fn-border;
+          padding-top: 8px;
+        }
+      }
+      .b3-list{
+        padding-right: 8px;
+        margin-bottom: 8px;
+        border-right: $fn-border;
+      }
+    }
+  }
+
+  &__card {
+    &block {
+      .protyle-breadcrumb {
+        padding: 0;
+      }
+    }
+    &action {
+      > div:not(.fn__flex-1) {
+        width: 20%;
+        .b3-button {
+          width: 100%;
+        }
+      }
+      > .b3-button {
+        width: 20%;
+      }
+    }
+  }
+}
