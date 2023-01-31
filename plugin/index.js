@@ -5,6 +5,7 @@ import { fisrtToUpper } from '../util/convert.js';
 import { tabBarMain } from './tabBar/main.js';
 import { stautsMain } from './status/main.js';
 import { bulletMain } from './bullet/main.js';
+import { publishHelperMain } from './publish-helper/main.js';
 
 const pluginRoot = root + 'plugin/';
 const pluginConfig = config.plugin;
@@ -13,6 +14,7 @@ const pluginConfig = config.plugin;
     tabBarMain();
     stautsMain();
     bulletMain();
+    await publishHelperMain();
 
     try {
         let version = await checkVersion();
