@@ -9,7 +9,8 @@
     "plugin": "sass --watch plugin:plugin -s compressed --no-source-map",
     "commit": "git add . && git cz",
     "release": "standard-version && git push --follow-tags origin main",
-    "amend": "git add . && git commit --amend --no-edit && git push --force"
+    "amend": "git add . && git commit --amend --no-edit && git push --force",
+    "archive": "bash archive.sh"
   },
   "config": {
     "commitizen": {
