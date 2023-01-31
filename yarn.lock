@@ -103,11 +103,6 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@semi-bot/semi-theme-universedesign@^1.0.12":
-  version "1.0.12"
-  resolved "https://registry.npmmirror.com/@semi-bot/semi-theme-universedesign/-/semi-theme-universedesign-1.0.12.tgz#dea28c2cb423b921531b21b4c4ae06d8dbba771c"
-  integrity sha512-EeqpOnoWPSZ22px//b3BLkA5TnALXeK81MqYRYlCgYeW/dpdDnSenGDmlxMQzLhgHOyfSZUFh5faFJp8VL5xog==
-
 "@tsconfig/node10@^1.0.7":
   version "1.0.9"
   resolved "https://registry.npmmirror.com/@tsconfig/node10/-/node10-1.0.9.tgz#df4907fc07a886922637b15e02d4cebc4c0021b2"
@@ -403,7 +398,7 @@ color-name@~1.1.4:
   resolved "https://registry.npmmirror.com/color-name/-/color-name-1.1.4.tgz#c2a09a87acbde69543de6f63fa3995c826c536a2"
   integrity sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==
 
-commitizen@^4.0.3, commitizen@^4.2.5:
+commitizen@^4.0.3:
   version "4.2.5"
   resolved "https://registry.npmmirror.com/commitizen/-/commitizen-4.2.5.tgz#48e5a5c28334c6e8ed845cc24fc9f072efd3961e"
   integrity sha512-9sXju8Qrz1B4Tw7kC5KhnvwYQN88qs2zbiB8oyMsnXZyJ24PPGiNM3nHr73d32dnE3i8VJEXddBFIbOgYSEXtQ==
@@ -420,6 +415,26 @@ commitizen@^4.0.3, commitizen@^4.2.5:
     is-utf8 "^0.2.1"
     lodash "4.17.21"
     minimist "1.2.6"
+    strip-bom "4.0.0"
+    strip-json-comments "3.1.1"
+
+commitizen@^4.3.0:
+  version "4.3.0"
+  resolved "https://registry.yarnpkg.com/commitizen/-/commitizen-4.3.0.tgz#0d056c542a2d2b1f9b9aba981aa32575b2849924"
+  integrity sha512-H0iNtClNEhT0fotHvGV3E9tDejDeS04sN1veIebsKYGMuGscFaswRoYJKmT3eW85eIJAs0F28bG2+a/9wCOfPw==
+  dependencies:
+    cachedir "2.3.0"
+    cz-conventional-changelog "3.3.0"
+    dedent "0.7.0"
+    detect-indent "6.1.0"
+    find-node-modules "^2.1.2"
+    find-root "1.1.0"
+    fs-extra "9.1.0"
+    glob "7.2.3"
+    inquirer "8.2.5"
+    is-utf8 "^0.2.1"
+    lodash "4.17.21"
+    minimist "1.2.7"
     strip-bom "4.0.0"
     strip-json-comments "3.1.1"
 
@@ -654,10 +669,10 @@ cz-conventional-changelog@3.3.0:
   optionalDependencies:
     "@commitlint/load" ">6.1.1"
 
-cz-git@^1.3.10:
-  version "1.3.11"
-  resolved "https://registry.npmmirror.com/cz-git/-/cz-git-1.3.11.tgz#fd386ca3b111d8585e22a1ea5678076b9aa897fa"
-  integrity sha512-YelXp5cbFCGslt60XQTpF+MQWoyTpkwPC5vMArIdI65bk9llgAl5vLQPtKBva+aQ781YctkeeKldlJ6Pizezbg==
+cz-git@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/cz-git/-/cz-git-1.4.1.tgz#c0f1daa3864afe2581c5dcdcb8e47987a6f49d11"
+  integrity sha512-EOtuitcnfxde8t3NNTKh2YxEJhLXGiVlKSVaZipK3+DVo135rEUifAfqxkslM66Nf6ZO7a+3JR+XAOLhMXUAjQ==
 
 dargs@^7.0.0:
   version "7.0.0"
@@ -1086,6 +1101,27 @@ inquirer@8.2.4:
     through "^2.3.6"
     wrap-ansi "^7.0.0"
 
+inquirer@8.2.5:
+  version "8.2.5"
+  resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-8.2.5.tgz#d8654a7542c35a9b9e069d27e2df4858784d54f8"
+  integrity sha512-QAgPDQMEgrDssk1XiwwHoOGYF9BAbUcc1+j+FhEvaOt8/cKRqyLn0U5qA6F74fGhTMGxf92pOvPBeh29jQJDTQ==
+  dependencies:
+    ansi-escapes "^4.2.1"
+    chalk "^4.1.1"
+    cli-cursor "^3.1.0"
+    cli-width "^3.0.0"
+    external-editor "^3.0.3"
+    figures "^3.0.0"
+    lodash "^4.17.21"
+    mute-stream "0.0.8"
+    ora "^5.4.1"
+    run-async "^2.4.0"
+    rxjs "^7.5.5"
+    string-width "^4.1.0"
+    strip-ansi "^6.0.0"
+    through "^2.3.6"
+    wrap-ansi "^7.0.0"
+
 is-arrayish@^0.2.1:
   version "0.2.1"
   resolved "https://registry.npmmirror.com/is-arrayish/-/is-arrayish-0.2.1.tgz#77c99840527aa8ecb1a8ba697b80645a7a926a9d"
@@ -1374,9 +1410,9 @@ minimist@1.2.6:
   resolved "https://registry.npmmirror.com/minimist/-/minimist-1.2.6.tgz#8637a5b759ea0d6e98702cfb3a9283323c93af44"
   integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
 
-minimist@^1.2.5:
+minimist@1.2.7, minimist@^1.2.5:
   version "1.2.7"
-  resolved "https://registry.npmmirror.com/minimist/-/minimist-1.2.7.tgz#daa1c4d91f507390437c6a8bc01078e7000c4d18"
+  resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.7.tgz#daa1c4d91f507390437c6a8bc01078e7000c4d18"
   integrity sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==
 
 modify-values@^1.0.0:
@@ -1761,10 +1797,10 @@ safe-buffer@~5.2.0:
   resolved "https://registry.npmmirror.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-sass@^1.54.0:
-  version "1.55.0"
-  resolved "https://registry.npmmirror.com/sass/-/sass-1.55.0.tgz#0c4d3c293cfe8f8a2e8d3b666e1cf1bff8065d1c"
-  integrity sha512-Pk+PMy7OGLs9WaxZGJMn7S96dvlyVBwwtToX895WmCpAOr5YiJYEUJfiJidMuKb613z2xNWcXCHEuOvjZbqC6A==
+sass@^1.57.1:
+  version "1.57.1"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.57.1.tgz#dfafd46eb3ab94817145e8825208ecf7281119b5"
+  integrity sha512-O2+LwLS79op7GI0xZ8fqzF7X2m/m8WFfI02dHOdsK5R2ECeS5F62zrwg/relM1rjSLy7Vd/DiMNIvPrQGsA0jw==
   dependencies:
     chokidar ">=3.0.0 <4.0.0"
     immutable "^4.0.0"
