@@ -19,6 +19,8 @@ A fork of Rem Craft. 一款现代化、扁平化设计的思源笔记主题
 
 2. 集成 `sy-post-publisher` 思源笔记发布工具，无需任何设置，开箱即用
 
+   新增插件在 `plugin/publish-helper` 目录
+
 ## 使用说明
 
 ### 最新
