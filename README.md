@@ -1,13 +1,21 @@
-# Rem Craft
+# Rem Craft Plus
 
 ![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/release/svchord/Rem-Craft?include_prereleases)
 ![GitHub](https://img.shields.io/github/license/svchord/Rem-Craft)
 ![GitHub last commit](https://img.shields.io/github/last-commit/svchord/Rem-Craft)
 ![jsDelivr hits (GitHub)](https://img.shields.io/jsdelivr/gh/hy/svchord/Rem-Craft?label=hits)
 
-一款现代化、扁平化设计的思源笔记主题
+A fork of Rem Craft. 一款现代化、扁平化设计的思源笔记主题
 
 <img width="1280" alt="preview" src="https://user-images.githubusercontent.com/61345763/203089325-75a4d1c7-9b59-43a1-b98d-9c1bb0dcd63e.png">
+
+## Rem-Craft-Plus 扩展功能
+
+1. 字体、代码块、标题间距等样式改进
+
+   新增样式在项目根目录的 `custom` 目录
+
+2. 集成 `sy-post-publisher` 思源笔记发布工具，无需任何设置，开箱即用
 
 ## 使用说明
 

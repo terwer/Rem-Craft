@@ -1,4 +1,4 @@
-export const root = '/appearance/themes/Rem Craft/';
+export const root = '/appearance/themes/Rem Craft Plus/';
 
 const elements = {
     editorFontSize: document.getElementById('editorFontSize'),

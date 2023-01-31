@@ -36,8 +36,8 @@ function initCalendar() {
                         border-radius: 5px; 
                         transform: translate(-50%, -50%); 
                         overflow: auto;" 
-                    src="/appearance/themes/Rem Craft/app/calendar" 
-                    data-src="/appearance/themes/Rem Craft/app/calendar" 
+                    src="/appearance/themes/Rem Craft Plus/app/calendar" 
+                    data-src="/appearance/themes/Rem Craft Plus/app/calendar" 
                     data-subtype="widget" 
                 >
                 </iframe>
