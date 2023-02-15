@@ -4,15 +4,18 @@ import { setResizeObserver, setMutationObserver } from '../../util/observer.js';
 import { isDockExist, getFolumn, setDockObserver } from '../../util/layout.js';
 
 const center = document.getElementsByClassName('layout__center')[0];
-const dockWidth = 40;
+const topBar = document.getElementById('toolbar');
+const drag = document.getElementById('drag');
 
 class TabBar {
     constructor(direction) {
         this.direction = direction;
         this.bar = this.getBar(center);
-        this.maxMargin = isDockExist(direction) ? this.getMaxMargin() : this.getMaxMargin() + dockWidth;
+        this.maxMargin = this.getMaxMargin();
         this.folumn = getFolumn(direction);
-        this.start();
+        if (this.folumn) {
+            this.start();
+        }
     }
 
     getBar(parent) {
@@ -44,36 +47,31 @@ class TabBar {
     }
 
     getMaxMargin() {
-        const topBar = document.getElementById('toolbar');
         const macBtnsWidth = 69;
+        const dockWidth = 40;
         let margin = 0;
 
-        for (let i = 0; i < topBar.children.length; i++) {
-            const btn = topBar.children.item(i);
-            if (btn.id === 'drag') {
-                if (this.direction === 'left') {
-                    break;
-                } else {
-                    margin = 0;
-                    continue;
+        if (topBar) {
+            for (let i = 0; i < topBar.children.length; i++) {
+                const btn = topBar.children.item(i);
+                if (btn.id === 'drag') {
+                    if (this.direction === 'left') {
+                        break;
+                    } else {
+                        margin = 0;
+                        continue;
+                    }
                 }
+                let style = window.getComputedStyle(btn);
+                margin += btn.clientWidth + pxToNum(style.marginLeft) + pxToNum(style.marginRight);
             }
-            let style = window.getComputedStyle(btn);
-            margin += btn.clientWidth + pxToNum(style.marginLeft) + pxToNum(style.marginRight);
-        }
 
-        margin -= 8;
-        if (this.direction === 'left') {
             if ('darwin' === window.siyuan.config.system.os) {
-                margin += macBtnsWidth;
+                margin += this.direction === 'left' ? macBtnsWidth : 2;
             }
-            return margin;
-        } else {
-            margin -= dockWidth;
-            if ('darwin' === window.siyuan.config.system.os) {
-                margin += 2;
-            }
-            return margin;
+
+            margin -= isDockExist(this.direction) ? dockWidth : 0;
+            return margin - 8;
         }
     }
 
@@ -85,9 +83,19 @@ class TabBar {
 
     autoSetMargin(folumnWidth) {
         if (this.bar) {
-            folumnWidth >= 0 && folumnWidth <= this.maxMargin
-                ? this.setMargin(this.maxMargin - folumnWidth)
-                : this.setMargin(0);
+            if (folumnWidth >= 0 && folumnWidth <= this.maxMargin) {
+                this.setMargin(this.maxMargin - folumnWidth);
+            } else {
+                this.setMargin(0);
+            }
+        }
+    }
+
+    resetMargin() {
+        if (this.folumn.classList.contains('layout--float')) {
+            this.autoSetMargin(0);
+        } else {
+            this.autoSetMargin(pxToNum(this.folumn.style.width));
         }
     }
 
@@ -95,9 +103,29 @@ class TabBar {
         if (this.bar) {
             this.setMargin(0);
             this.bar = this.getBar(center);
-            this.autoSetMargin(pxToNum(this.folumn.style.width));
+            this.resetMargin();
         } else {
             this.bar = this.getBar(center);
+        }
+    }
+
+    queryEmpty(hasEmpty) {
+        center.style.paddingTop = hasEmpty ? '36px' : '0';
+        drag.style.opacity = hasEmpty ? '1' : '0';
+        center.querySelectorAll('.layout-tab-container').forEach((element) => {
+            element.style.borderTopColor = hasEmpty ? 'rgba(var(--border-3))' : 'transparent';
+        });
+    }
+
+    centerListener(node, operation) {
+        // 分屏监听判断
+        if (node.classList?.contains('layout__resize')) {
+            this.resetBar();
+        }
+        // 空白页监听判断
+        if (node.querySelector('.layout__empty')) {
+            this.resetBar();
+            this.queryEmpty(operation === 'add');
         }
     }
 
@@ -105,48 +133,45 @@ class TabBar {
         // 顶栏监听
         let topBarObserver = setMutationObserver('childList', () => {
             this.maxMargin = this.getMaxMargin();
-            this.autoSetMargin(pxToNum(this.folumn.style.width));
+            this.resetMargin();
         });
-        const topBar = document.getElementById('toolbar');
-        topBarObserver.observe(topBar, {
-            childList: true,
-            subtree: true,
-        });
+        topBarObserver.observe(topBar, { childList: true, subtree: true });
 
         // 边栏监听
-        let folumnObserver = setResizeObserver((entry) => {
-            let folumnWidth = entry.contentBoxSize[0].inlineSize;
-            this.autoSetMargin(folumnWidth);
+        // 边栏未悬浮的尺寸监听
+        let folumnSizeObserver = setResizeObserver((entry) => {
+            if (!this.folumn.classList.contains('layout--float')) {
+                let folumnWidth = entry.contentBoxSize[0].inlineSize;
+                this.autoSetMargin(folumnWidth);
+            }
         });
-        folumnObserver.observe(this.folumn);
+        folumnSizeObserver.observe(this.folumn);
+        // 边栏悬浮的选择器监听
+        let folumnObserver = setMutationObserver('attributes', () => {
+            this.resetMargin();
+        });
+        folumnObserver.observe(this.folumn, { attributes: true, attributeFilter: ['class'] });
 
         // dock栏监听
         setDockObserver(this.direction, () => {
-            this.maxMargin = isDockExist(this.direction) ? this.getMaxMargin() : this.getMaxMargin() + dockWidth;
-            this.autoSetMargin(pxToNum(this.folumn.style.width));
+            this.maxMargin = this.getMaxMargin();
+            this.resetMargin();
         });
 
         // 编辑区域监听
+        this.queryEmpty(center.querySelector('.layout__empty'));
         let centerObserver = setMutationObserver('childList', (mutation) => {
-            // 分屏监听
-            if (
-                mutation?.addedNodes[0]?.classList?.contains('layout__resize') ||
-                mutation?.removedNodes[0]?.classList?.contains('layout__resize')
-            ) {
-                this.resetBar();
+            // 增加节点监听
+            if (mutation?.addedNodes[0]?.nodeType === 1) {
+                this.centerListener(mutation.addedNodes[0], 'add');
             }
-            // 空白页监听
+            // 删除节点监听
             if (mutation?.removedNodes[0]?.nodeType === 1) {
-                if (mutation.removedNodes[0].querySelector('.layout__empty')) {
-                    this.resetBar();
-                }
+                this.centerListener(mutation.removedNodes[0], 'remove');
             }
         });
 
-        centerObserver.observe(center, {
-            childList: true,
-            subtree: true,
-        });
+        centerObserver.observe(center, { childList: true, subtree: true });
     }
 }
 

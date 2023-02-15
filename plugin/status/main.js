@@ -8,7 +8,7 @@ class Status {
         this.btn = document.getElementById('statusHelp');
         this.menu = document.getElementById('commonMenu');
         this.dockBtn = document.getElementById('barDock');
-        this.dockMenu = this.dockBtn.querySelector('.b3-menu');
+        this.dockMenu = this.dockBtn?.querySelector('.b3-menu');
         this.start();
     }
 
@@ -25,23 +25,24 @@ class Status {
         let dockBtn = this.addBtn(
             'dockBtn',
             window.siyuan.config.uiLayout.hideDock ? 'iconDock' : 'iconHideDock',
-            window.siyuan.config.uiLayout.hideDock ? window.siyuan.languages.showDock : window.siyuan.languages.hideDock
+            window.siyuan.config.uiLayout.hideDock
+                ? window.siyuan.languages.showDock
+                : window.siyuan.languages.hideDock
         );
 
         const useElement = dockBtn.firstElementChild.firstElementChild;
         const label = dockBtn.querySelector('.b3-menu__label');
         dockBtn.addEventListener('click', () => {
-            if (!window.siyuan.config.uiLayout.hideDock) {
+            const dockIsShow = useElement.getAttribute('xlink:href') === '#iconHideDock';
+            if (dockIsShow) {
                 useElement.setAttribute('xlink:href', '#iconDock');
                 label.innerHTML = window.siyuan.languages.showDock;
-                window.siyuan.config.uiLayout.hideDock = true;
             } else {
                 useElement.setAttribute('xlink:href', '#iconHideDock');
                 label.innerHTML = window.siyuan.languages.hideDock;
-                window.siyuan.config.uiLayout.hideDock = false;
             }
-            document.querySelectorAll('.dock').forEach((item) => {
-                if (window.siyuan.config.uiLayout.hideDock) {
+            document.querySelectorAll('.dock--vertical').forEach((item) => {
+                if (dockIsShow) {
                     if (item.querySelector('.dock__item')) {
                         item.classList.add('fn__none');
                     }
@@ -89,19 +90,20 @@ class Status {
     }
 
     start() {
-        this.dockMenu.classList.add(`${prefix}-dock-menu`);
+        if (this.dockMenu) {
+            this.dockMenu.classList.add(`${prefix}-dock-menu`);
+            let commonMenuObserver = setMutationObserver('attributes', (mutation) => {
+                if (mutation.target.dataset.name === 'statusHelp') {
+                    this.addDockBtn();
+                    this.addDockMenu();
+                }
+            });
+            commonMenuObserver.observe(commonMenu, {
+                attributes: true,
+                attributeFilter: ['data-name'],
+            });
+        }
 
-        let commonMenuObserver = setMutationObserver('attributes', (mutation) => {
-            if (mutation.target.dataset.name === 'statusHelp') {
-                console.log(mutation);
-                this.addDockBtn();
-                this.addDockMenu();
-            }
-        });
-        commonMenuObserver.observe(commonMenu, {
-            attributes: true,
-            attributeFilter: ['data-name'],
-        });
         this.setRight();
         setWndPadding('left', 0);
         setWndPadding('right', 40);

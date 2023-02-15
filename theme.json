@@ -1,10 +1,10 @@
 {
-  "name": "Rem Craft Plus",
-  "author": "Seven Chor,Terwer Green",
-  "url": "https://github.com/terwer/Rem-Craft-Plus",
-  "version": "2.5.10",
-  "modes": [
-    "dark",
-    "light"
-  ]
+    "name": "Rem Craft Plus",
+    "author": "Seven Chor,Terwer Green",
+    "url": "https://github.com/terwer/Rem-Craft-Plus",
+    "version": "2.6.0",
+    "modes": [
+        "dark",
+        "light"
+    ]
 }
