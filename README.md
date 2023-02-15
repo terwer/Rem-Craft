@@ -13,13 +13,17 @@ A fork of Rem Craft. 一款现代化、扁平化设计的思源笔记主题
 
 **Rem Craft + 自定义css片段 + 自定义js片段 = Rem Craft Plus**
 
-1. 字体、代码块、标题间距等样式改进
+-[X] 字体、代码块、标题间距等样式改进
 
-   新增样式在项目根目录的 `custom` 目录
+     新增样式在项目根目录的 `custom` 目录
 
-2. 集成 `sy-post-publisher` 思源笔记发布工具，无需任何设置，开箱即用
+-[X] 集成 `sy-post-publisher` 思源笔记发布工具，无需任何设置，开箱即用 
 
-   新增插件在 `plugin/publish-helper` 目录
+     新增插件在 `plugin/publish-helper` 目录，备注：`sy-post-publisher` 需要单独在集市挂件下载
+
+- [ ] 思维导图
+
+- [ ] 时间线-timeline
 
 ## 使用说明
 
