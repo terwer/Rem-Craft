@@ -4,6 +4,7 @@
     "description": "My theme for siyuan",
     "main": "theme.js",
     "scripts": {
+        "makeLink": "node  --no-warnings script/make_dev_link.mjs",
         "build": "sass --watch style/index.scss:theme.css -s compressed",
         "theme": "sass --watch theme:theme -s compressed --no-source-map",
         "plugin": "sass --watch plugin:plugin -s compressed --no-source-map",
@@ -24,5 +25,6 @@
         "cz-git": "^1.7.0",
         "sass": "^1.63.6",
         "standard-version": "^9.5.0"
-    }
+    },
+    "packageManager": "pnpm@9.13.2"
 }
